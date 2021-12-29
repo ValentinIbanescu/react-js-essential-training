@@ -21,7 +21,7 @@ function Footer() {
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header name="React©" />
       <Main />
       <Footer />
     </div>

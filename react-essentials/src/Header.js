@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function Header () {
+function Header (props) {
+  console.log(props);
   return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -15,7 +16,7 @@ function Header () {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn {props.name}
         </a>
       </header>
   );
