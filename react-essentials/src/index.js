@@ -19,3 +19,14 @@ ReactDOM.render(
   ),
   document.getElementById('root')
 );
+
+ReactDOM.render(
+  <ul>
+    <li>Monday 1</li>
+    <li>Tuesday 2</li>
+    <li>Wednesday 3</li>
+    <li>Thursday 4</li>
+    <li>Friday 5</li>
+  </ul>,
+  document.getElementById('root')
+);
