@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App.js';
 
 ReactDOM.render(
   React.createElement("h1", {style: {color: 'green'}}, `Hello, World! This is my first React element.`),
@@ -21,12 +22,6 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <ul>
-    <li>Monday 1</li>
-    <li>Tuesday 2</li>
-    <li>Wednesday 3</li>
-    <li>Thursday 4</li>
-    <li>Friday 5</li>
-  </ul>,
+  <App />,
   document.getElementById('root')
 );
