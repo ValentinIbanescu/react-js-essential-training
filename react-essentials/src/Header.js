@@ -2,6 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const coreConcept = [
+  "Logical operators",
+  "Loops",
+  "Functions",
+]
+
+coreConcept.map((concept) => (console.log(concept)))
+
 function Header (props) {
   console.log(props);
   return (
@@ -18,6 +26,7 @@ function Header (props) {
         >
           Learn {props.name}
         </a>
+        <ul style={{listStyle: "none"}}>{coreConcept.map((concept) => <li>{concept}</li>)}</ul>
       </header>
   );
 }

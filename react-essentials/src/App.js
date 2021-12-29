@@ -2,28 +2,36 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js';
 
-function Main() {
+function Main(props) {
   return (
     <section>
-      <p>Lorem</p>
+      <p>{props.description}</p>
       </section>
   );
 }
 
-function Footer() {
+function Footer(props) {
   return (
   <footer>
-    <p>Made with React©</p>
+    <p>Made with React© {props.year}</p>
   </footer>
   );
 }
 
+const coreConcept = [
+  "Logical operators",
+  "Loops",
+  "Functions",
+]
+
+coreConcept.map((concept) => (console.log(concept)))
+
 function App() {
   return (
     <div className="App">
-      <Header name="React©" />
-      <Main />
-      <Footer />
+      <Header name="JavaScript©" />
+      <Main description="This is a property of the Main."/>
+      <Footer year={new Date().getFullYear()}/>
     </div>
   );
 }
