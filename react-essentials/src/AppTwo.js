@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import './App.css';
 
 function AppTwo() {
   const [emotion, setEmotion] = useState("happy");
   const [secondary, setSecondary] = useState("tired");
-  const [checked, setChecked] = useState(false);
+  const [checked, toggle] = useReducer (
+    (checked) => !checked,
+    false
+    );
 
   useEffect(() => {
     console.log(`It's ${emotion} around here.`)
@@ -17,10 +20,6 @@ function AppTwo() {
   useEffect(() => {
     console.log(`Status is ${checked}.`)
   }, [checked]);
-
-  function toggle() {
-    setChecked(checked => !checked)
-  }
 
   return (
     <>
