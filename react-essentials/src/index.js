@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
+import AppTwo from './AppTwo.js';
 
 /* ReactDOM.render(
   React.createElement("h1", {style: {color: 'green'}}, `Hello, World! This is my first React element.`),
@@ -20,10 +21,6 @@ import App from './App.js';
   ),
   document.getElementById('root')
 ); */
-
-function AppTwo() {
-  return <h1>Hello, World! This is my second React App</h1>;
-}
 
 ReactDOM.render(
   <>
