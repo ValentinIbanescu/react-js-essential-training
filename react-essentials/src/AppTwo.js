@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import './App.css';
 
-// https://api.github.com/users/valentinibanescu
-
 function AppTwo({login}) {
   const [emotion, setEmotion] = useState("happy");
   const [secondary, setSecondary] = useState("tired");
