@@ -23,16 +23,27 @@ function AppTwo({login}) {
     console.log(`Status is ${checked}.`)
   }, [checked]);
 
+  // Handling loading and errors
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   // Fetching data with Hooks
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    if (!login) return;
+    setLoading(true);
     fetch(`https://api.github.com/users/${login}`)
       .then(response => response.json())
       .then(setData)
-  }, []);
+      .then(() => setLoading(false))
+      .catch(setError);
+  }, [login]);
 
-  if (data) {
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
+  if (!data) return null;
+
   return (
     <>
       <h1 className="App">Hello, World! The current emotion is {emotion} and {secondary}!</h1>
@@ -50,8 +61,6 @@ function AppTwo({login}) {
       </div>
     </>
   );
-  }
-  return <div>No user found.</div>
 }
 
 export default AppTwo;
