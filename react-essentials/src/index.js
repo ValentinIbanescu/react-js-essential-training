@@ -5,6 +5,7 @@ import App from './App.js';
 import AppTwo from './AppTwo.js';
 import AppThree from './AppThree.js';
 import Checkbox from './Checkbox.js';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 /* ReactDOM.render(
   React.createElement("h1", {style: {color: 'green'}}, `Hello, World! This is my first React element.`),
@@ -25,11 +26,11 @@ import Checkbox from './Checkbox.js';
 ); */
 
 ReactDOM.render(
-  <>
-    <App authenticated={false} />
-    <AppTwo login="valentinibanescu"/>
+  <Router>
+    {/* <App authenticated={false} />
+    <AppTwo login="valentinibanescu"/> */}
     <AppThree />
-    <Checkbox />
-  </>,
+    {/* <Checkbox /> */}
+  </Router>,
   document.getElementById('root')
 );
