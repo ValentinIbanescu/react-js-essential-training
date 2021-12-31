@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.js';
 import AppTwo from './AppTwo.js';
 import AppThree from './AppThree.js';
+import Checkbox from './Checkbox.js';
 
 /* ReactDOM.render(
   React.createElement("h1", {style: {color: 'green'}}, `Hello, World! This is my first React element.`),
@@ -28,6 +29,7 @@ ReactDOM.render(
     <App authenticated={false} />
     <AppTwo login="valentinibanescu"/>
     <AppThree />
+    <Checkbox />
   </>,
   document.getElementById('root')
 );

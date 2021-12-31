@@ -1,3 +1,3 @@
 export function timesTwo(a) {
-  return a * 2;
+  return a + "-ok";
 }
