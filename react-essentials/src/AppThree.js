@@ -5,7 +5,8 @@ import {
   Home,
   About,
   Events,
-  Contact
+  Contact,
+  Woops404
 } from './pages.js';
 
 function AppThree() {
@@ -16,6 +17,7 @@ function AppThree() {
         <Route path="/about" element={<About />}/>
         <Route path="/events" element={<Events />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="*" element={<Woops404 />}/>
       </Routes>
     </div>
   )
