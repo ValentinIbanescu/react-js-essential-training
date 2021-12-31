@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 export function Home() {
   return (
@@ -37,9 +37,11 @@ export function Contact() {
 }
 
 export function Woops404() {
+  let location = useLocation();
+  console.log(location);
   return (
     <div>
-      <h1>This page does not exist!</h1>
+      <h1>This page does not exist at {location.pathname}!</h1>
     </div>
   );
 }
