@@ -26,9 +26,9 @@ function AppTwo() {
 }
 
 ReactDOM.render(
-  <React.Fragment>
+  <>
     <App />
     <AppTwo />
-  </React.Fragment>,
+  </>,
   document.getElementById('root')
 );
