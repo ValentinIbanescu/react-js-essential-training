@@ -55,12 +55,15 @@ function Footer(props) {
   );
 }
 
-function App(props) {
+let [,,editor] = ["computer", "broadband", "VS Code"];
+console.log(editor);
+
+function App({authenticated}) {
   return (
     <div className="App">
       <Header name="JavaScript©" concepts={conceptsObject}/>
       <Main description="This is a property of the Main."/>
-      { (props.authenticated) ? <SecretComponent /> : <StandardComponent />}
+      { authenticated ? <SecretComponent /> : <StandardComponent /> }
       <Footer year={new Date().getFullYear()}/>
     </div>
   );
