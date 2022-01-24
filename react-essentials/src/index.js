@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
 
-ReactDOM.render(
+/* ReactDOM.render(
   React.createElement("h1", {style: {color: 'green'}}, `Hello, World! This is my first React element.`),
   document.getElementById('root')
-);
+); */
 
-ReactDOM.render(
+/* ReactDOM.render(
   React.createElement(
     "ul",
     null,
@@ -19,9 +19,16 @@ ReactDOM.render(
     React.createElement("li", null, "Friday"),
   ),
   document.getElementById('root')
-);
+); */
+
+function AppTwo() {
+  return <h1>Hello, World! This is my second React App</h1>;
+}
 
 ReactDOM.render(
-  <App />,
+  <div>
+    <App />
+    <AppTwo />
+  </div>,
   document.getElementById('root')
 );
