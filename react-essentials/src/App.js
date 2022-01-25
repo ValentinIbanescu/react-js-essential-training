@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import cover from './cover.jpg';
 
 const concepts = [
   "Logical operators",
@@ -10,6 +11,7 @@ const concepts = [
 ]
 
 const conceptsObject = concepts.map((concept, index) => ({id: index, title: concept}));
+console.log(conceptsObject);
 
 function Header(props) {
   console.log(props);
@@ -40,6 +42,7 @@ function Main(props) {
   return (
     <section>
       <p>{props.description}</p>
+      <img src={cover} className="App-cover" alt="cover" height="200" />
       </section>
   );
 }
