@@ -55,14 +55,23 @@ function Footer(props) {
   );
 }
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Header name="JavaScript©" concepts={conceptsObject}/>
       <Main description="This is a property of the Main."/>
+      { (props.authenticated) ? <SecretComponent /> : <StandardComponent />}
       <Footer year={new Date().getFullYear()}/>
     </div>
   );
+}
+
+function SecretComponent() {
+ return <h1 className="App-link">Secret component available only for authenticated users.</h1>
+}
+
+function StandardComponent() {
+  return <h1 className="App-link">Standard component available for everybody.</h1>
 }
 
 export default App;

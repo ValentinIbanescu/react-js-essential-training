@@ -27,7 +27,7 @@ function AppTwo() {
 
 ReactDOM.render(
   <>
-    <App />
+    <App authenticated={false} />
     <AppTwo />
   </>,
   document.getElementById('root')
