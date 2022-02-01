@@ -42,7 +42,7 @@ function Main(props) {
   return (
     <section>
       <p>{props.description}</p>
-      <img src={cover} className="App-cover" alt="cover" height="200" />
+      <img src={"https://github.com/ValentinIbanescu.png"} className="App-cover" alt="cover" height="200" />
       </section>
   );
 }
