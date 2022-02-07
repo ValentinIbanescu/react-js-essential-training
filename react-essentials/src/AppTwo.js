@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import './App.css';
 
-function AppTwo() {
+// https://api.github.com/users/valentinibanescu
+
+function AppTwo({login}) {
   const [emotion, setEmotion] = useState("happy");
   const [secondary, setSecondary] = useState("tired");
   const [checked, toggle] = useReducer (
@@ -21,6 +23,16 @@ function AppTwo() {
     console.log(`Status is ${checked}.`)
   }, [checked]);
 
+  // Fetching data with Hooks
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${login}`)
+      .then(response => response.json())
+      .then(setData)
+  }, []);
+
+  if (data) {
   return (
     <>
       <h1 className="App">Hello, World! The current emotion is {emotion} and {secondary}!</h1>
@@ -30,8 +42,16 @@ function AppTwo() {
       <button onClick={() => setSecondary("crabby")}>Make crabby</button>
       <input type="checkbox" value={checked} onChange={toggle}/>
       <p>{checked ? "Yes" : "No"}</p>
+      {/* Return fetched data. */}
+      <div>
+        <h1>{data.name}</h1>
+        <p>{data.location}</p>
+        <img alt={data.name} src={data.avatar_url} />
+      </div>
     </>
   );
+  }
+  return <div>No user found.</div>
 }
 
 export default AppTwo;

@@ -25,7 +25,7 @@ import AppTwo from './AppTwo.js';
 ReactDOM.render(
   <>
     <App authenticated={false} />
-    <AppTwo />
+    <AppTwo login="valentinibanescu"/>
   </>,
   document.getElementById('root')
 );
